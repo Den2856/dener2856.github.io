@@ -1,0 +1,463 @@
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.header {
+  position: relative;
+  width: 2580px;
+  height: 80px;
+  background: linear-gradient(135deg, #2f2f2f, #4e4e4e, #777777);
+}
+
+.body{
+  margin: 0px !important;
+}
+
+.header .overlap-btn {
+  position: absolute;
+  width: 270px;
+  height: 80px;
+  top: 0px;
+  left: 90%;
+  transform: translateX(-50%);
+  background-color: #72f5db;
+  border-radius: 50%;
+  transition: tranform scale .15s ease-out;
+}
+
+.header .text-login {
+  position: absolute;
+  width: 158px;
+  height: 42px;
+  top: 25px;
+  left: 56px;
+  font-family: "Cooper Black-Regular";
+  font-weight: 400;
+  color: #1d576a;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.overlap-btn:hover{
+                     transform: scale(0.95)
+}
+.text-login:hover{
+                     transform: scale(0.95)
+}
+
+a{
+  text-decoration: none;
+}
+
+.sun-icon{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.moon-icon{
+  position: absolute;
+  left: 60px;
+  top: 10px;
+  rotate: -90deg;
+}
+
+.container{
+  position: absolute;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .toggle{
+  position: absolute;
+  top: -45px;
+  left: 0;
+  right: 0px;
+  width: 90px;
+  height: 40px;
+  background: #444;
+  border-radius: 30px;
+
+}
+
+.toggle-button{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+  background: #f2e883;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.container .toggle.active{
+  background: #000;
+}
+
+.container .toggle{
+  position: absolute;
+  top: 0;
+  background: #7593ee;
+}
+
+.container .toggle.active .toggle-button{
+  left: 65px;
+}
+
+.container .text{
+  position: absolute;
+  left: 95px;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 10px;
+}
+
+.text{
+  color: #fff;
+  padding: 25px;
+  margin-top: 10px;
+  top: 0px;
+}
+
+.cart-icon{
+  position: absolute;
+  top: 19px;
+  cursor: pointer;
+}
+
+.link-cart{
+  position: absolute;
+  inset: 19px 0 0 0px;
+  width: 36px;
+  height: 32px;
+  color: #9e9e9e;
+  text-align: center;
+}
+
+.link-cart:visited{
+  color: #9e9e9e;
+}
+
+.cart-items-count{
+  display: flex;
+  position: absolute;
+  top: 11px;
+  left: 22px;
+  border-radius: 60px;
+  color: #ff0000;
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+
+
+
+
+@media(max-width: 1200px){
+
+.header{
+  width: 1200px;
+  height: 70px;
+}
+
+.header .overlap-btn-logged{                   
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: -45px;
+  left: 90%;
+  transform: translateX(-50%);
+  border: 3px solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5138F1,#6f58f5,#ca67a7);
+  background-clip: padding-box;
+  padding: 1px;
+}
+
+.header .overlap-btn-logged::after{
+  position: absolute;
+  inset: -4px;
+  content: '';
+  background: linear-gradient(135deg, #5138F1,#6f58f5,#ca67a7);
+  border-radius: 50%;
+  z-index: -1;
+}
+   
+.header .overlap-btn{                   
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: -45px;
+  left: 90%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background-color: #505050;
+}
+
+
+.header .login-img{                      
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.container .toggle{
+  position: absolute;
+  top: 15px;
+  background: #7593ee;
+}
+                  
+.text{
+  color: #fff;
+  padding: 25px;
+  margin-top: 10px;
+  top: -10px;
+}
+
+.links{
+  display: flex;
+  width: 500px;
+  height: 70px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.way{
+  font-size: 18px;
+  color: #fff;
+  font-weight: 100;
+}
+
+.cart-button{
+  width: 120px;
+  height: 50px;
+  background-color: #30303078;
+  position: relative;
+  display: flex;
+  top: 10px;
+  left: 70%;
+  transform: translateX(50%);
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-cart{
+  position: relative;
+  width: auto;
+  height: auto;
+  padding: 0;
+  color: #ebebeb;
+}
+
+}
+
+
+@media(min-width: 1200px) and (max-width: 2579px){
+
+.header{
+  width: auto;
+  height: 90px;
+}
+
+.container .toggle{
+  position: absolute;
+  top: 25px;
+  background: #7593ee;
+}
+
+.header .overlap-btn-logged{                   
+  width: 64px;
+  height: 64px;
+  position: relative;
+  top: -42px;
+  left: 95%;
+  transform: translateX(-50%);
+  border: 3px solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5138F1,#6f58f5,#ca67a7);
+  background-clip: padding-box;
+  padding: 1px;
+}
+
+.header .overlap-btn-logged::after{
+  position: absolute;
+  inset: -4px;
+  content: '';
+  background: linear-gradient(135deg, #5138F1,#6f58f5,#ca67a7);
+  border-radius: 50%;
+  z-index: -1;
+}
+   
+.header .overlap-btn{                   
+  width: 64px;
+  height: 64px;
+  position: relative;
+  top: -42px;
+  left: 95%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background-color: #505050;
+}
+
+
+.header .login-img{                      
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+                      
+.links{
+  display: flex;
+  width: 500px;
+  height: 90px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -5px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.way{
+  font-size: 20px;
+  color: #fff;
+  font-weight: 100;
+}
+
+.cart-button{
+  width: 120px;
+  height: 50px;
+  background-color: #30303078;
+  position: relative;
+  display: flex;
+  top: 20px;
+  left: 79%;
+  transform: translateX(50%);
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-cart{
+  position: relative;
+  width: auto;
+  height: auto;
+  padding: 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+}
+
+
+@media (min-width: 2580px) {
+
+.header{
+  width: 100%;
+  height: 100px;
+}
+
+.container .toggle{
+  position: absolute;
+  top: 30px;
+  background: #7593ee;
+}
+
+.header .overlap-btn-logged{                   
+  width: 70px;
+  height: 70px;
+  position: relative;
+  top: -40px;
+  left: 95%;
+  transform: translateX(-50%);
+  border: 3px solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5138F1,#6f58f5,#ca67a7);
+  background-clip: padding-box;
+  padding: 1px;
+}
+
+.header .overlap-btn-logged::after{
+  position: absolute;
+  inset: -4px;
+  content: '';
+  background: linear-gradient(135deg, #5138F1,#6f58f5,#ca67a7);
+  border-radius: 50%;
+  z-index: -1;
+}
+   
+.header .overlap-btn{                   
+  width: 70px;
+  height: 70px;
+  position: relative;
+  top: -40px;
+  left: 95%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background-color: #505050;
+}
+
+.header .login-img{                      
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.links{
+  display: flex;
+  width: 500px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -5px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+  
+.way{
+  font-size: 24px;
+  color: #fff;
+  font-weight: 100;
+}
+
+.cart-button{
+  width: 120px;
+  height: 50px;
+  background-color: #30303078;
+  position: relative;
+  display: flex;
+  top: 25px;
+  left: 85%;
+  transform: translateX(50%);
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-cart{
+  position: relative;
+  width: auto;
+  height: auto;
+  padding: 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+}

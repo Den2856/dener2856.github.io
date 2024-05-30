@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% load static %}
 <html>
 <head>
 	<title>Мой блог</title>
@@ -27,19 +26,11 @@
 				<img src="..\.\..\media\image\svg\cart.svg" style="rotate: 180deg;">
 				<a class="text-cart" href="/cart">Корзина</a>
 			</div>
-			{% if request.user.is_authenticated %}
       		<div class="overlap-btn-logged">
 				<a href="{% url 'userauths:sign-out' %}">
 					<img class="login-img" src="..\..\media\image\2023\islands-200.png">
 				</a>
-			</div>
-			{% else %}
-			<div class="overlap-btn">
-				<a href="{% url 'userauths:sign-in' %}">
-					<img class="login-img" src="..\..\media\image\2023\islands-200.png">
-				</a>
-			</div>
-			{% endif %}	
+			</div>	
 		</div>			
     </header>
 </head>
@@ -54,24 +45,24 @@
 				<a href="/main/home">
 					<span>Бытовая химия <i class="fa-solid fa-angle-right fa-2xs" style="position: relative; top: 1px;"></i></span>
 				</a>
-					<span>{{ home.product_name }}</span>
+					<span>Активиа Быстрый завтрак Натуральный</span>
 				</a>
 			</ol>
-			<h1 class="title">{{ home.product_name }}</h1>
+			<h1 class="title">Активиа Быстрый завтрак Натуральный</h1>
 		</div>
 		<main class="align-content">
 			<div class="item">
-				<img class="product-picture" src="{{home.productImage}}">
+				<img class="product-picture" src="http://www.calorizator.ru/sites/default/files/imagecache/product_512/product/activia-bz-1.jpg">
 				<ul class="list">
-					<li><img class="pic-list" src="{{home.productImage}}"></li>
+					<li><img class="pic-list" src="http://www.calorizator.ru/sites/default/files/imagecache/product_512/product/activia-bz-1.jpg"></li>
 				</ul>
 			</div>
 			
 			<div class="right-info">
 				<div class="check-out">
 					<div class="price-block">
-						<a class="price-main">{{ home.product_sale }} ₽</a>
-						<a class="discount-amount"> {{ home.product_price }} ₽</a>
+						<a class="price-main">48 ₽</a>
+						<a class="discount-amount"> 68 ₽</a>
 					</div>
 					<button class="to-cart">В корзину</button>
 					<input type="hidden" value="{{ home.id }}" class="product-id">
@@ -110,9 +101,10 @@
 					<tr>
 						<td>
 							<span class="span-tab">
-								Свинина, вода, крахмал картофельный, соль, сахар, пряности, регуляторы кислотности:
-								Е450(i,iii,v), E451(i); ароматизаторы, усилитель вкуса и аромата Е621, антиокислитель
-								Е301,стабилизаторы: Е407а, Е452(i); фиксатор окраски Е250.
+								Нормализованное молоко, восстановленное молоко из сухого молока, наполнитель
+								(вода, сахар, мюсли (пшеница, овес), ржаные отруби, концентрированный сок яблока,
+								ароматизатор натуральный, сок лимона концентрированный,
+								кукурузный крахмал), сахар, йогуртовая закваска, бифидобактерии ActiRegularis®
 							</span>
 						</td>
 					</tr>
@@ -121,7 +113,7 @@
 					</tr>
 					<tr>
 						<td>
-							<span class="span-tab">1.д</span>
+							<span class="span-tab">30.д</span>
 						</td>
 					</tr>
 					<tr>
@@ -129,7 +121,7 @@
 					</tr>
 					<tr>
 						<td>
-							<span class="span-tab">-----</span>
+							<span class="span-tab">OOO "Активиа РУС"</span>
 						</td>
 					</tr>
 					<tr>
@@ -137,7 +129,7 @@
 					</tr>
 					<tr>
 						<td>
-							<span class="span-tab">Останкино</span>
+							<span class="span-tab">Активиа</span>
 						</td>
 					</tr>
 				</tbody>

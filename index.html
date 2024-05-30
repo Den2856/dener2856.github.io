@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Мой блог</title>
+	
+	<link rel="stylesheet" href="{% static 'css/learn-more.css' %}" type="text/css" media="all" />
+	<link rel="stylesheet" href="{% static 'css/Bar.css' %}" type="text/css" media="all"/>
+	<link rel="stylesheet" href="{% static 'css/footer.css' %}" type="text/css" media="all">
+	<link rel="shortcut icon" href="{% static 'icons/favicon.png'%}" type="image/png" media="all"/>
+	
+	<header>
+		<div class="header">
+			<div class="container">
+					<div class="toggle">
+						<img class="sun-icon" src="../../media/image/svg/sun-icon.svg">
+						<img class="moon-icon" src="../../media/image/svg/moon-icon.svg">
+						<button class="toggle-button"></button> 
+					</div>
+			</div>
+			<div class="links">
+				<a class="way" href="/main">Каталог</a>
+				<a class="way" href="/about">О нас</a>
+				<a class="way" href="/complains">Поддержка</a>
+			</div>
+			<div class="cart-button">
+				<img src="..\.\..\media\image\svg\cart.svg" style="rotate: 180deg;">
+				<a class="text-cart" href="/cart">Корзина</a>
+			</div>
+			{% if request.user.is_authenticated %}
+      		<div class="overlap-btn-logged">
+				<a href="{% url 'userauths:sign-out' %}">
+					<img class="login-img" src="..\..\media\image\2023\islands-200.png">
+				</a>
+			</div>
+			{% else %}
+			<div class="overlap-btn">
+				<a href="{% url 'userauths:sign-in' %}">
+					<img class="login-img" src="..\..\media\image\2023\islands-200.png">
+				</a>
+			</div>
+			{% endif %}	
+		</div>			
+    </header>
+</head>
+
+<body style="margin: 0px;" class="body">
+	<div class="root">
+		<div class="top-info">
+			<ol>
+				<a href="/">
+					<span>Главная <i class="fa-solid fa-angle-right fa-2xs" style="position: relative; top: 1px;"></i></span>
+				</a>
+				<a href="/main/home">
+					<span>Бытовая химия <i class="fa-solid fa-angle-right fa-2xs" style="position: relative; top: 1px;"></i></span>
+				</a>
+					<span>{{ home.product_name }}</span>
+				</a>
+			</ol>
+			<h1 class="title">{{ home.product_name }}</h1>
+		</div>
+		<main class="align-content">
+			<div class="item">
+				<img class="product-picture" src="{{home.productImage}}">
+				<ul class="list">
+					<li><img class="pic-list" src="{{home.productImage}}"></li>
+				</ul>
+			</div>
+			
+			<div class="right-info">
+				<div class="check-out">
+					<div class="price-block">
+						<a class="price-main">{{ home.product_sale }} ₽</a>
+						<a class="discount-amount"> {{ home.product_price }} ₽</a>
+					</div>
+					<button class="to-cart">В корзину</button>
+					<input type="hidden" value="{{ home.id }}" class="product-id">
+					<input type="hidden" value="{{ home.product_name }}" class="product-title">
+					<input type="hidden" value="1" class="product-quantity">
+				</div>
+			</div>
+			<section class="description">
+				<h2 class="wrap-text">На 100 граммов</h2>
+				<ul class="diet">
+					<dl>
+						<dd>410</dd>
+						<dt>ккал</dt>
+					</dl>
+					<dl>
+						<dd>21</dd>
+						<dt>белки</dt>
+					</dl>
+					<dl>
+						<dd>16</dd>
+						<dt>жиры</dt>
+					</dl>
+					<dl>
+						<dd>89</dd>
+						<dt>углеводы</dt>
+					</dl>
+
+				</ul>
+				<h2 class="wrap-text">О товаре</h2>
+			</section>
+			<table>
+				<tbody>
+					<tr>
+						<th>Состав</th>
+					</tr>
+					<tr>
+						<td>
+							<span class="span-tab">
+								Свинина, вода, крахмал картофельный, соль, сахар, пряности, регуляторы кислотности:
+								Е450(i,iii,v), E451(i); ароматизаторы, усилитель вкуса и аромата Е621, антиокислитель
+								Е301,стабилизаторы: Е407а, Е452(i); фиксатор окраски Е250.
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<th>Срок хранения</th>
+					</tr>
+					<tr>
+						<td>
+							<span class="span-tab">1.д</span>
+						</td>
+					</tr>
+					<tr>
+						<th>Производитель</th>
+					</tr>
+					<tr>
+						<td>
+							<span class="span-tab">-----</span>
+						</td>
+					</tr>
+					<tr>
+						<th>Бренд</th>
+					</tr>
+					<tr>
+						<td>
+							<span class="span-tab">Останкино</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		<main>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="../../../static/js/search.js" defer></script>
+	<script src="../../../static/js/darkMode.js"></script>
+	<script src="../../../static/js/carousel.js"></script>
+	<script src="https://kit.fontawesome.com/769368c5bc.js" crossorigin="anonymous"></script>
+</body>
+</html>
